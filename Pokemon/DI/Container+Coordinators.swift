@@ -14,5 +14,6 @@ extension Container {
         autoregister(SearchCoordinator.self, initializer: SearchCoordinator.init)
         autoregister(FavoritesCoordinator.self, initializer: FavoritesCoordinator.init)
         autoregister(TabBarCoordinator.self, initializer: TabBarCoordinator.init)
+        autoregister(DetailCoordinator.self, initializer: DetailCoordinator.init)
     }
 }

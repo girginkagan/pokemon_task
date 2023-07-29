@@ -5,8 +5,9 @@
 //  Created by Kagan Girgin on 7/29/23.
 //
 
-import Foundation
+import Network
 
 protocol CollectionViewSourceDelegate {
     func onCollectionViewDidScroll()
+    func onCollectionViewItemDidTap(item: Card)
 }

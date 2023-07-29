@@ -20,6 +20,9 @@ extension Storyboarded {
         case AppStoryboard.search.rawValue:
             let viewController = SearchViewController(nibName: identifier, bundle: nil) as! Self
             return viewController
+        case AppStoryboard.detail.rawValue:
+            let viewController = DetailViewController(nibName: identifier, bundle: nil) as! Self
+            return viewController
         default:
             fatalError("No viewcontroller passed.")
         }

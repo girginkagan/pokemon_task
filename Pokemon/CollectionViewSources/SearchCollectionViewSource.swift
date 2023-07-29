@@ -36,4 +36,10 @@ final class SearchCollectionViewSource: NSObject, UICollectionViewDataSource, UI
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.onCollectionViewDidScroll()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let data = data, let cards = data.cards else { fatalError() }
+        
+        delegate?.onCollectionViewItemDidTap(item: cards[indexPath.row])
+    }
 }

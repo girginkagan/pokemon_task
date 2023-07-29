@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Network
 
 final class SearchCoordinator: BaseCoordinator {
     private let viewModel: SearchViewModel
@@ -27,4 +28,9 @@ final class SearchCoordinator: BaseCoordinator {
         navigationController.viewControllers = [viewController]
     }
     
+    func presentDetail(data: Card?) {
+        guard let coordinator = AppDelegate.container.resolve(DetailCoordinator.self) else { fatalError("Did you forget to register your coordinator?") }
+        coordinator.setData(data: data)
+        startChild(coordinator: coordinator)
+    }
 }

@@ -13,5 +13,6 @@ extension Container {
         autoregister(SearchViewModel.self, initializer: SearchViewModel.init)
         autoregister(TabBarViewModel.self, initializer: TabBarViewModel.init)
         autoregister(FavoritesViewModel.self, initializer: FavoritesViewModel.init)
+        autoregister(DetailViewModel.self, initializer: DetailViewModel.init)
     }
 }

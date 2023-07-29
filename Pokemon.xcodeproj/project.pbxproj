@@ -24,7 +24,6 @@
 		779240402A74FF3A00D9CA47 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7792403F2A74FF3A00D9CA47 /* TabBarCoordinator.swift */; };
 		779240422A74FF4D00D9CA47 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779240412A74FF4D00D9CA47 /* TabBarViewModel.swift */; };
 		779240452A750A1B00D9CA47 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779240442A750A1B00D9CA47 /* Color.swift */; };
-		779240472A750A2000D9CA47 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779240462A750A2000D9CA47 /* Icon.swift */; };
 		7792404A2A750B6E00D9CA47 /* Container+registerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779240492A750B6E00D9CA47 /* Container+registerDependencies.swift */; };
 		7792404C2A750B8000D9CA47 /* Container+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7792404B2A750B8000D9CA47 /* Container+ViewModels.swift */; };
 		7792404E2A750B9100D9CA47 /* Container+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7792404D2A750B9100D9CA47 /* Container+Services.swift */; };
@@ -49,6 +48,10 @@
 		77B013CB2A75637D00BA3FE2 /* DB in Frameworks */ = {isa = PBXBuildFile; productRef = 77B013CA2A75637D00BA3FE2 /* DB */; };
 		77B013CD2A7566EE00BA3FE2 /* CollectionViewSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B013CC2A7566EE00BA3FE2 /* CollectionViewSourceDelegate.swift */; };
 		77B013CF2A7567BA00BA3FE2 /* FavoritesCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B013CE2A7567BA00BA3FE2 /* FavoritesCollectionViewSource.swift */; };
+		77B013D32A756EA200BA3FE2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B013D12A756EA200BA3FE2 /* DetailViewController.swift */; };
+		77B013D42A756EA200BA3FE2 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B013D22A756EA200BA3FE2 /* DetailViewController.xib */; };
+		77B013D62A756EAC00BA3FE2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B013D52A756EAC00BA3FE2 /* DetailViewModel.swift */; };
+		77B013D82A756EB500BA3FE2 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B013D72A756EB500BA3FE2 /* DetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +71,6 @@
 		7792403F2A74FF3A00D9CA47 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		779240412A74FF4D00D9CA47 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		779240442A750A1B00D9CA47 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		779240462A750A2000D9CA47 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		779240492A750B6E00D9CA47 /* Container+registerDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+registerDependencies.swift"; sourceTree = "<group>"; };
 		7792404B2A750B8000D9CA47 /* Container+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ViewModels.swift"; sourceTree = "<group>"; };
 		7792404D2A750B9100D9CA47 /* Container+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Services.swift"; sourceTree = "<group>"; };
@@ -91,6 +93,10 @@
 		77B013C92A755E7400BA3FE2 /* DB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DB; sourceTree = "<group>"; };
 		77B013CC2A7566EE00BA3FE2 /* CollectionViewSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSourceDelegate.swift; sourceTree = "<group>"; };
 		77B013CE2A7567BA00BA3FE2 /* FavoritesCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewSource.swift; sourceTree = "<group>"; };
+		77B013D12A756EA200BA3FE2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		77B013D22A756EA200BA3FE2 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		77B013D52A756EAC00BA3FE2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		77B013D72A756EB500BA3FE2 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 				7792403E2A74FF2D00D9CA47 /* TabBar */,
 				77B0139D2A75129900BA3FE2 /* Search */,
 				77B0139E2A7512B100BA3FE2 /* Favorites */,
+				77B013D02A756E6100BA3FE2 /* Detail */,
 				779240122A74F0C900D9CA47 /* LaunchScreen.storyboard */,
 			);
 			path = App;
@@ -226,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				779240442A750A1B00D9CA47 /* Color.swift */,
-				779240462A750A2000D9CA47 /* Icon.swift */,
 				77B013A72A75185B00BA3FE2 /* SystemIcon.swift */,
 				77181E562A750E9400C9F716 /* AppStoryboard.swift */,
 			);
@@ -299,6 +305,17 @@
 				77B013C22A7548ED00BA3FE2 /* UICollectionView+register.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		77B013D02A756E6100BA3FE2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				77B013D12A756EA200BA3FE2 /* DetailViewController.swift */,
+				77B013D52A756EAC00BA3FE2 /* DetailViewModel.swift */,
+				77B013D72A756EB500BA3FE2 /* DetailCoordinator.swift */,
+				77B013D22A756EA200BA3FE2 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				779240142A74F0C900D9CA47 /* LaunchScreen.storyboard in Resources */,
+				77B013D42A756EA200BA3FE2 /* DetailViewController.xib in Resources */,
 				779240112A74F0C900D9CA47 /* Assets.xcassets in Resources */,
 				77B013BE2A753DC900BA3FE2 /* SearchCollectionViewCell.xib in Resources */,
 				77B013AF2A7528C000BA3FE2 /* FavoritesViewController.xib in Resources */,
@@ -398,12 +416,13 @@
 				779240502A750B9C00D9CA47 /* Container+Coordinators.swift in Sources */,
 				77B013A62A7515DA00BA3FE2 /* SearchCoordinator.swift in Sources */,
 				7792404A2A750B6E00D9CA47 /* Container+registerDependencies.swift in Sources */,
-				779240472A750A2000D9CA47 /* Icon.swift in Sources */,
 				7792404C2A750B8000D9CA47 /* Container+ViewModels.swift in Sources */,
+				77B013D82A756EB500BA3FE2 /* DetailCoordinator.swift in Sources */,
 				77B013BD2A753DC900BA3FE2 /* SearchCollectionViewCell.swift in Sources */,
 				7792403D2A74FEEB00D9CA47 /* ViewControllerUtil.swift in Sources */,
 				77B013C12A7548DD00BA3FE2 /* UICollectionViewCell+identifier.swift in Sources */,
 				77B013CD2A7566EE00BA3FE2 /* CollectionViewSourceDelegate.swift in Sources */,
+				77B013D62A756EAC00BA3FE2 /* DetailViewModel.swift in Sources */,
 				77B013B82A753D7D00BA3FE2 /* SearchCollectionViewSource.swift in Sources */,
 				779240402A74FF3A00D9CA47 /* TabBarCoordinator.swift in Sources */,
 				779240452A750A1B00D9CA47 /* Color.swift in Sources */,
@@ -418,6 +437,7 @@
 				77B013B32A7528D500BA3FE2 /* FavoritesCoordinator.swift in Sources */,
 				779240292A74FB2D00D9CA47 /* BaseViewModel.swift in Sources */,
 				77B013CF2A7567BA00BA3FE2 /* FavoritesCollectionViewSource.swift in Sources */,
+				77B013D32A756EA200BA3FE2 /* DetailViewController.swift in Sources */,
 				77B013AE2A7528C000BA3FE2 /* FavoritesViewController.swift in Sources */,
 				77181E552A750E8400C9F716 /* Storyboarded.swift in Sources */,
 			);

@@ -22,7 +22,7 @@ final class FavoritesViewModel: BaseViewModel {
     }
     
     func setCollectionView() {
-        onCollectionViewDataSourceReady.accept(FavoritesCollectionViewSource(data: realmUtil.getData()))
+        onCollectionViewDataSourceReady.accept(FavoritesCollectionViewSource(data: realmUtil.getData(), delegate: self))
     }
     
     func favoriteItem(index: Int) {
@@ -33,5 +33,14 @@ final class FavoritesViewModel: BaseViewModel {
         } else {
             onError.onNext(BaseErrorModel(errorCode: nil, message: nil, errors: nil))
         }
+    }
+}
+
+extension FavoritesViewModel: CollectionViewSourceDelegate {
+    func onCollectionViewItemDidTap(item: Card) {
+        coordinator?.presentDetail(data: item)
+    }
+    
+    func onCollectionViewDidScroll() {
     }
 }

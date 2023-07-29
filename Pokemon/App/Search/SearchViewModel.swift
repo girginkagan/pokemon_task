@@ -46,6 +46,10 @@ final class SearchViewModel: BaseViewModel {
 }
 
 extension SearchViewModel: CollectionViewSourceDelegate {
+    func onCollectionViewItemDidTap(item: Network.Card) {
+        coordinator?.presentDetail(data: item)
+    }
+    
     func onCollectionViewDidScroll() {
         isCollectionViewDidScroll.onNext(true)
     }

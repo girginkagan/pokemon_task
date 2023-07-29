@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Network
 
 final class FavoritesCoordinator: BaseCoordinator {
     private let viewModel: FavoritesViewModel
@@ -27,4 +28,9 @@ final class FavoritesCoordinator: BaseCoordinator {
         navigationController.viewControllers = [viewController]
     }
     
+    func presentDetail(data: Card?) {
+        guard let coordinator = AppDelegate.container.resolve(DetailCoordinator.self) else { fatalError("Did you forget to register your coordinator?") }
+        coordinator.setData(data: data)
+        startChild(coordinator: coordinator)
+    }
 }
