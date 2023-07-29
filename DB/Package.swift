@@ -4,22 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "Network",
+    name: "DB",
     platforms: [.iOS(.v13)],
     products: [
         .library(
-            name: "Network",
-            targets: ["Network"])
+            name: "DB",
+            targets: ["DB"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.7.0"))
+        .package(url: "https://github.com/arturdev/Unrealm.git", .upToNextMinor(from: "1.9.5"))
     ],
     targets: [
         .target(
-            name: "Network",
-            dependencies: ["Alamofire"]),
+            name: "DB",
+            dependencies: ["Unrealm"]),
         .testTarget(
-            name: "NetworkTests",
-            dependencies: ["Network"]),
+            name: "DBTests",
+            dependencies: ["DB"]),
     ]
 )

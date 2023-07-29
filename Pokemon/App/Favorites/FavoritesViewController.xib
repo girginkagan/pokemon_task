@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="Pokemon" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="INk-Gm-WgA" id="04R-Gs-92S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +19,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="INk-Gm-WgA">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" name="color_bg"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="elg-IF-BZj">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="color_bg"/>
+            <constraints>
+                <constraint firstItem="INk-Gm-WgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9FD-5o-tT3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="INk-Gm-WgA" secondAttribute="bottom" id="AYu-jR-qLE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="INk-Gm-WgA" secondAttribute="trailing" id="B4J-ny-fxn"/>
+                <constraint firstItem="INk-Gm-WgA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XMD-JC-SuX"/>
+            </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>
     </objects>

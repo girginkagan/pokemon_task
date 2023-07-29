@@ -14,6 +14,7 @@ final class SearchViewModel: BaseViewModel {
     var coordinator: SearchCoordinator?
     private let disposeBag = DisposeBag()
     let onError = BehaviorSubject<BaseErrorModel?>(value: nil)
+    let onFavoriteStatus = BehaviorSubject<Bool?>(value: nil)
     private var collectionViewData: SearchResponseModel?
     let onCollectionViewDataSourceReady = BehaviorRelay<SearchCollectionViewSource?>(value: nil)
     let isCollectionViewDidScroll = BehaviorSubject<Bool>(value: false)
@@ -34,11 +35,17 @@ final class SearchViewModel: BaseViewModel {
     }
     
     func favoriteItem(index: Int) {
-        
+        if let item = onCollectionViewDataSourceReady.value?.data?.cards?[index] {
+            realmUtil.setData(data: item) { [weak self] added in
+                self?.onFavoriteStatus.onNext(added)
+            }
+        } else {
+            onError.onNext(BaseErrorModel(errorCode: nil, message: nil, errors: nil))
+        }
     }
 }
 
-extension SearchViewModel: SearchCollectionViewSourceDelegate {
+extension SearchViewModel: CollectionViewSourceDelegate {
     func onCollectionViewDidScroll() {
         isCollectionViewDidScroll.onNext(true)
     }

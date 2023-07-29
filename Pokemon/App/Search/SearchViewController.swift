@@ -74,6 +74,19 @@ final class SearchViewController: UIViewController, Storyboarded {
         }.disposed(by: disposeBag)
         
         viewModel
+            .onFavoriteStatus
+            .bind (onNext: { [weak self] data in
+            if let status = data {
+                guard let self = self else { return }
+                if status {
+                    AlertUtil.showStandardAlert(parentController: self, title: "Success", message: "Item has been marked as favorite.")
+                } else {
+                    AlertUtil.showStandardAlert(parentController: self, title: "Success", message: "Item has been removed from the favorite list.")
+                }
+            }
+        }).disposed(by: disposeBag)
+        
+        viewModel
             .onCollectionViewDataSourceReady
             .bind { [weak self] data in
             if let source = data {
