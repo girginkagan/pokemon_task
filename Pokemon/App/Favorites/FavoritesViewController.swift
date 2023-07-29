@@ -16,11 +16,11 @@ final class FavoritesViewController: UIViewController, Storyboarded {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         
         if collectionView.dataSource != nil {
-            collectionView.reloadData()
+            collectionView.collectionViewLayout.invalidateLayout()
         }
     }
     
