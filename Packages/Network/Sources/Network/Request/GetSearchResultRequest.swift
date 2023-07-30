@@ -11,9 +11,9 @@ final class GetSearchResultRequest: BaseRequest {
     var headers: [String: String]?
     var requestBodyObject: Data?
     var requestMethod = RequestHttpMethod.get
-    var requestPath: String = "cards?hp="
+    var requestPath: String = "cards?hp=gte"
     
     init(hp: String) {
-        requestPath += hp.lowercased()
+        requestPath += hp
     }
 }

@@ -12,7 +12,8 @@ let package = Package(
             targets: ["Network"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.7.0"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.7.0")),
+        .package(url: "https://github.com/WeTransfer/Mocker.git", .upToNextMinor(from: "2.6.0"))
     ],
     targets: [
         .target(
@@ -20,6 +21,7 @@ let package = Package(
             dependencies: ["Alamofire"]),
         .testTarget(
             name: "NetworkTests",
-            dependencies: ["Network"]),
+            dependencies: ["Network", "Mocker"],
+            resources: [.process("Mocks/response.json")]),
     ]
 )

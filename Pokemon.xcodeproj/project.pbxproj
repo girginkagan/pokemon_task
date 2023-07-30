@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		77181E542A750E8400C9F716 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		77181E562A750E9400C9F716 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		7748C8C32A7681660096DDAF /* DB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DB; path = Packages/DB; sourceTree = "<group>"; };
 		779240042A74F0C600D9CA47 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779240072A74F0C600D9CA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		779240102A74F0C900D9CA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		77B013BC2A753DC900BA3FE2 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		77B013C02A7548DD00BA3FE2 /* UICollectionViewCell+identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+identifier.swift"; sourceTree = "<group>"; };
 		77B013C22A7548ED00BA3FE2 /* UICollectionView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+register.swift"; sourceTree = "<group>"; };
-		77B013C92A755E7400BA3FE2 /* DB */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DB; sourceTree = "<group>"; };
 		77B013CC2A7566EE00BA3FE2 /* CollectionViewSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSourceDelegate.swift; sourceTree = "<group>"; };
 		77B013CE2A7567BA00BA3FE2 /* FavoritesCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewSource.swift; sourceTree = "<group>"; };
 		77B013D12A756EA200BA3FE2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				7792401C2A74F3E700D9CA47 /* Network */,
-				77B013C92A755E7400BA3FE2 /* DB */,
+				7748C8C32A7681660096DDAF /* DB */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

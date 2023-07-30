@@ -24,7 +24,7 @@
                 <searchBar contentMode="redraw" placeholder="Search Health Point" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-Gh-WIv">
                     <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                     <color key="barTintColor" name="color_tabbar_bg"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="a5W-SP-dXu"/>
                     </connections>
